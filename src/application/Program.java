@@ -1,10 +1,7 @@
 package application;
 
-import java.util.List;
-
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Seller;
 
 public class Program {
 
@@ -12,13 +9,8 @@ public class Program {
 
 		SellerDao sdao = DaoFactory.createSellerDao();
 		
-		//Seller se = sdao.findById(2);
-		//System.out.println(se);
+		sdao.deleteById(11);
 		
-		List<Seller> list = sdao.findAll();
-		for(Seller s : list) {
-			System.out.println(s);
-		}
 	}
 
 }
